@@ -1,0 +1,11 @@
+osc
+osc.exe
+core
+*.so
+*.dll
+*.plist
+*.o
+*~
+*.swp
+build
+deps
