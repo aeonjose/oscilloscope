@@ -32,5 +32,3 @@ The IIO 'scope uses:
     http://code.google.com/p/inih/
 
 The IIO 'scope is copyright its authors, and is released under the GPL 2.0
-
-This is modified by aeon for iioscope. date 18/3/21
