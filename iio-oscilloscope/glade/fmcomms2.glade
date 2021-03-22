@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
 <interface>
-  <!-- interface-requires gtk+ 3.0 -->
-  <!-- interface-naming-policy toplevel-contextual -->
+  <requires lib="gtk+" version="3.0"/>
   <object class="GtkAdjustment" id="adjust_rx1_phase">
     <property name="lower">-180</property>
     <property name="upper">180</property>
@@ -96,7 +96,6 @@
   </object>
   <object class="GtkAdjustment" id="adjustment_dcxo_coarse_tune">
     <property name="upper">63</property>
-    <property name="lower">0</property>
     <property name="value">8</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
@@ -160,7 +159,7 @@
     <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="adjustment_tx_lo_freq">
-    <property name="lower">46.875002</property>
+    <property name="lower">46.875002000000002</property>
     <property name="upper">6000</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
@@ -224,11 +223,17 @@
                                           <placeholder/>
                                         </child>
                                         <child>
+                                          <placeholder/>
+                                        </child>
+                                        <child>
+                                          <placeholder/>
+                                        </child>
+                                        <child>
                                           <object class="GtkLabel" id="label2">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="xalign">0</property>
                                             <property name="label" translatable="yes">Active ENSM:</property>
+                                            <property name="xalign">0</property>
                                           </object>
                                           <packing>
                                             <property name="x_options">GTK_FILL</property>
@@ -239,8 +244,8 @@
                                           <object class="GtkLabel" id="label4">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="xalign">0</property>
                                             <property name="label" translatable="yes">ENSM Modes:</property>
+                                            <property name="xalign">0</property>
                                           </object>
                                           <packing>
                                             <property name="top_attach">1</property>
@@ -266,7 +271,6 @@
                                           <object class="GtkComboBoxText" id="ensm_mode_available">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="entry_text_column">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">1</property>
@@ -294,7 +298,6 @@
                                           <object class="GtkComboBoxText" id="calib_mode_available">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="entry_text_column">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">3</property>
@@ -322,7 +325,6 @@
                                           <object class="GtkComboBoxText" id="trx_rate_governor_available">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="entry_text_column">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">5</property>
@@ -337,8 +339,8 @@
                                           <object class="GtkLabel" id="label7">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="xalign">0</property>
                                             <property name="label" translatable="yes">Calibration Mode:</property>
+                                            <property name="xalign">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">2</property>
@@ -351,8 +353,8 @@
                                           <object class="GtkLabel" id="label8">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="xalign">0</property>
                                             <property name="label" translatable="yes">Calibration Modes:</property>
+                                            <property name="xalign">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">2</property>
@@ -367,8 +369,8 @@
                                           <object class="GtkLabel" id="label5">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="xalign">0</property>
                                             <property name="label" translatable="yes">TRX Rate Governor:</property>
+                                            <property name="xalign">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">4</property>
@@ -381,8 +383,8 @@
                                           <object class="GtkLabel" id="label25">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="xalign">0</property>
                                             <property name="label" translatable="yes">TRX Rate Governor Available:</property>
+                                            <property name="xalign">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">4</property>
@@ -397,9 +399,9 @@
                                           <object class="GtkLabel" id="label_filter_fir_sel">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="xalign">0</property>
                                             <property name="label" translatable="yes">Filter FIR
 configuration:</property>
+                                            <property name="xalign">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">6</property>
@@ -412,7 +414,6 @@ configuration:</property>
                                           <object class="GtkFileChooserButton" id="filter_fir_config">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="orientation">vertical</property>
                                             <property name="width_chars">12</property>
                                             <signal name="file-set" handler="filter_fir_config_file_set_cb" swapped="no"/>
                                           </object>
@@ -638,7 +639,6 @@ configuration:</property>
                                               <object class="GtkComboBoxText" id="dcxo_cal_type">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="entry_text_column">0</property>
                                                 <items>
                                                   <item translatable="yes">REFCLK</item>
                                                   <item translatable="yes">RF Output</item>
@@ -870,7 +870,6 @@ configuration:</property>
                                     <property name="use_action_appearance">False</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
-                                    <property name="use_action_appearance">False</property>
                                     <property name="label" translatable="yes">Zoom In</property>
                                     <property name="use_underline">True</property>
                                     <property name="stock_id">gtk-go-down</property>
@@ -938,9 +937,6 @@ configuration:</property>
                                               <placeholder/>
                                             </child>
                                             <child>
-                                              <placeholder/>
-                                            </child>
-                                            <child>
                                               <object class="GtkLabel" id="label12">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
@@ -952,11 +948,8 @@ configuration:</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="invisible_char">•</property>
-                                                <property name="invisible_char_set">True</property>
                                                 <property name="primary_icon_activatable">False</property>
                                                 <property name="secondary_icon_activatable">False</property>
-                                                <property name="primary_icon_sensitive">True</property>
-                                                <property name="secondary_icon_sensitive">True</property>
                                                 <property name="adjustment">adjustment_rf_bw_rx</property>
                                                 <property name="digits">3</property>
                                               </object>
@@ -981,11 +974,8 @@ configuration:</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="invisible_char">•</property>
-                                                <property name="invisible_char_set">True</property>
                                                 <property name="primary_icon_activatable">False</property>
                                                 <property name="secondary_icon_activatable">False</property>
-                                                <property name="primary_icon_sensitive">True</property>
-                                                <property name="secondary_icon_sensitive">True</property>
                                                 <property name="adjustment">adjustment_sampl_freq_tx</property>
                                                 <property name="digits">6</property>
                                               </object>
@@ -1012,11 +1002,8 @@ configuration:</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="invisible_char">•</property>
-                                                <property name="invisible_char_set">True</property>
                                                 <property name="primary_icon_activatable">False</property>
                                                 <property name="secondary_icon_activatable">False</property>
-                                                <property name="primary_icon_sensitive">True</property>
-                                                <property name="secondary_icon_sensitive">True</property>
                                                 <property name="adjustment">adjustment_rx_lo_freq</property>
                                                 <property name="digits">6</property>
                                               </object>
@@ -1042,7 +1029,6 @@ configuration:</property>
                                               <object class="GtkComboBoxText" id="rf_port_select_rx">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="entry_text_column">0</property>
                                               </object>
                                               <packing>
                                                 <property name="left_attach">3</property>
@@ -1066,7 +1052,6 @@ configuration:</property>
                                               <object class="GtkComboBoxText" id="rx_fastlock_profile">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
-                                                <property name="entry_text_column">0</property>
                                                 <items>
                                                   <item translatable="yes">0</item>
                                                   <item translatable="yes">1</item>
@@ -1127,7 +1112,6 @@ configuration:</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
-                                                <property name="use_action_appearance">False</property>
                                                 <property name="xalign">0</property>
                                                 <property name="draw_indicator">True</property>
                                               </object>
@@ -1193,8 +1177,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label15">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">1</property>
                                                             <property name="label" translatable="yes">Hardware Gain(dB):</property>
+                                                            <property name="xalign">1</property>
                                                           </object>
                                                           <packing>
                                                             <property name="x_options">GTK_FILL</property>
@@ -1206,11 +1190,8 @@ configuration:</property>
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">True</property>
                                                             <property name="invisible_char">•</property>
-                                                            <property name="invisible_char_set">True</property>
                                                             <property name="primary_icon_activatable">False</property>
                                                             <property name="secondary_icon_activatable">False</property>
-                                                            <property name="primary_icon_sensitive">True</property>
-                                                            <property name="secondary_icon_sensitive">True</property>
                                                             <property name="adjustment">adjustment_hw_gain_rx1</property>
                                                             <property name="digits">2</property>
                                                           </object>
@@ -1225,8 +1206,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label17">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">1</property>
                                                             <property name="label" translatable="yes">RSSI(dB):</property>
+                                                            <property name="xalign">1</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">1</property>
@@ -1239,8 +1220,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="rssi_rx1">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">0</property>
                                                             <property name="label" translatable="yes">0</property>
+                                                            <property name="xalign">0</property>
                                                           </object>
                                                           <packing>
                                                             <property name="left_attach">1</property>
@@ -1255,8 +1236,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label27">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">1</property>
                                                             <property name="label" translatable="yes">Gain Control:</property>
+                                                            <property name="xalign">1</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">2</property>
@@ -1269,8 +1250,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label30">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">1</property>
                                                             <property name="label" translatable="yes">Gain Control Modes:</property>
+                                                            <property name="xalign">1</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">3</property>
@@ -1298,7 +1279,6 @@ configuration:</property>
                                                           <object class="GtkComboBoxText" id="gain_control_mode_available_rx1">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="entry_text_column">0</property>
                                                           </object>
                                                           <packing>
                                                             <property name="left_attach">1</property>
@@ -1351,8 +1331,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label26">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">1</property>
                                                             <property name="label" translatable="yes">Hardware Gain(dB):</property>
+                                                            <property name="xalign">1</property>
                                                           </object>
                                                           <packing>
                                                             <property name="x_options">GTK_FILL</property>
@@ -1364,11 +1344,8 @@ configuration:</property>
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">True</property>
                                                             <property name="invisible_char">•</property>
-                                                            <property name="invisible_char_set">True</property>
                                                             <property name="primary_icon_activatable">False</property>
                                                             <property name="secondary_icon_activatable">False</property>
-                                                            <property name="primary_icon_sensitive">True</property>
-                                                            <property name="secondary_icon_sensitive">True</property>
                                                             <property name="adjustment">adjustment_hw_gain_rx2</property>
                                                             <property name="digits">2</property>
                                                           </object>
@@ -1383,8 +1360,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label28">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">1</property>
                                                             <property name="label" translatable="yes">RSSI(dB):</property>
+                                                            <property name="xalign">1</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">1</property>
@@ -1397,8 +1374,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="rssi_rx2">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">0</property>
                                                             <property name="label" translatable="yes">0</property>
+                                                            <property name="xalign">0</property>
                                                           </object>
                                                           <packing>
                                                             <property name="left_attach">1</property>
@@ -1413,8 +1390,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label29">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">1</property>
                                                             <property name="label" translatable="yes">Gain Control:</property>
+                                                            <property name="xalign">1</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">2</property>
@@ -1427,8 +1404,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label31">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="xalign">1</property>
                                                             <property name="label" translatable="yes">Gain Control Modes:</property>
+                                                            <property name="xalign">1</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">3</property>
@@ -1456,7 +1433,6 @@ configuration:</property>
                                                           <object class="GtkComboBoxText" id="gain_control_mode_available_rx2">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="entry_text_column">0</property>
                                                           </object>
                                                           <packing>
                                                             <property name="left_attach">1</property>
@@ -1658,9 +1634,6 @@ configuration:</property>
                                           <placeholder/>
                                         </child>
                                         <child>
-                                          <placeholder/>
-                                        </child>
-                                        <child>
                                           <object class="GtkLabel" id="label16">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
@@ -1676,11 +1649,8 @@ configuration:</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="invisible_char">•</property>
-                                            <property name="invisible_char_set">True</property>
                                             <property name="primary_icon_activatable">False</property>
                                             <property name="secondary_icon_activatable">False</property>
-                                            <property name="primary_icon_sensitive">True</property>
-                                            <property name="secondary_icon_sensitive">True</property>
                                             <property name="adjustment">adjustment_rf_bw_tx</property>
                                             <property name="digits">3</property>
                                           </object>
@@ -1709,11 +1679,8 @@ configuration:</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="invisible_char">•</property>
-                                            <property name="invisible_char_set">True</property>
                                             <property name="primary_icon_activatable">False</property>
                                             <property name="secondary_icon_activatable">False</property>
-                                            <property name="primary_icon_sensitive">True</property>
-                                            <property name="secondary_icon_sensitive">True</property>
                                             <property name="adjustment">adjustment_sampl_freq_tx</property>
                                             <property name="digits">6</property>
                                           </object>
@@ -1757,11 +1724,8 @@ configuration:</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="invisible_char">•</property>
-                                            <property name="invisible_char_set">True</property>
                                             <property name="primary_icon_activatable">False</property>
                                             <property name="secondary_icon_activatable">False</property>
-                                            <property name="primary_icon_sensitive">True</property>
-                                            <property name="secondary_icon_sensitive">True</property>
                                             <property name="adjustment">adjustment_tx_lo_freq</property>
                                             <property name="digits">6</property>
                                           </object>
@@ -1778,7 +1742,6 @@ configuration:</property>
                                           <object class="GtkComboBoxText" id="rf_port_select_tx">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="entry_text_column">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">3</property>
@@ -1806,7 +1769,6 @@ configuration:</property>
                                           <object class="GtkComboBoxText" id="tx_fastlock_profile">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="entry_text_column">0</property>
                                             <items>
                                               <item translatable="yes">0</item>
                                               <item translatable="yes">1</item>
@@ -1869,7 +1831,6 @@ configuration:</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
-                                            <property name="use_action_appearance">False</property>
                                             <property name="xalign">0</property>
                                             <property name="draw_indicator">True</property>
                                           </object>
@@ -2218,7 +2179,6 @@ configuration:</property>
                                                             <object class="GtkComboBoxText" id="fpga_tx_frequency_available">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                              <property name="entry_text_column">0</property>
                                                             </object>
                                                             <packing>
                                                             <property name="left_attach">1</property>
@@ -2349,7 +2309,6 @@ configuration:</property>
                                                             <object class="GtkComboBoxText" id="fpga_rx_frequency_available">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                              <property name="entry_text_column">0</property>
                                                             </object>
                                                             <packing>
                                                             <property name="left_attach">1</property>
@@ -2792,6 +2751,20 @@ configuration:</property>
           </object>
           <packing>
             <property name="position">1</property>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel" id="label52">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">MWT Settings</property>
+          </object>
+          <packing>
+            <property name="position">2</property>
             <property name="tab_fill">False</property>
           </packing>
         </child>
