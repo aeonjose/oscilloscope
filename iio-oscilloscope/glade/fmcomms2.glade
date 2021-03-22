@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.18.3 -->
 <interface>
-  <requires lib="gtk+" version="3.0"/>
+  <!-- interface-requires gtk+ 3.0 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkAdjustment" id="adjust_rx1_phase">
     <property name="lower">-180</property>
     <property name="upper">180</property>
@@ -96,6 +96,7 @@
   </object>
   <object class="GtkAdjustment" id="adjustment_dcxo_coarse_tune">
     <property name="upper">63</property>
+    <property name="lower">0</property>
     <property name="value">8</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
@@ -159,7 +160,7 @@
     <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="adjustment_tx_lo_freq">
-    <property name="lower">46.875002000000002</property>
+    <property name="lower">46.875002</property>
     <property name="upper">6000</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
@@ -223,17 +224,11 @@
                                           <placeholder/>
                                         </child>
                                         <child>
-                                          <placeholder/>
-                                        </child>
-                                        <child>
-                                          <placeholder/>
-                                        </child>
-                                        <child>
                                           <object class="GtkLabel" id="label2">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Active ENSM:</property>
                                             <property name="xalign">0</property>
+                                            <property name="label" translatable="yes">Active ENSM:</property>
                                           </object>
                                           <packing>
                                             <property name="x_options">GTK_FILL</property>
@@ -244,8 +239,8 @@
                                           <object class="GtkLabel" id="label4">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">ENSM Modes:</property>
                                             <property name="xalign">0</property>
+                                            <property name="label" translatable="yes">ENSM Modes:</property>
                                           </object>
                                           <packing>
                                             <property name="top_attach">1</property>
@@ -271,6 +266,7 @@
                                           <object class="GtkComboBoxText" id="ensm_mode_available">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
+                                            <property name="entry_text_column">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">1</property>
@@ -298,6 +294,7 @@
                                           <object class="GtkComboBoxText" id="calib_mode_available">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
+                                            <property name="entry_text_column">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">3</property>
@@ -325,6 +322,7 @@
                                           <object class="GtkComboBoxText" id="trx_rate_governor_available">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
+                                            <property name="entry_text_column">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">5</property>
@@ -339,8 +337,8 @@
                                           <object class="GtkLabel" id="label7">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Calibration Mode:</property>
                                             <property name="xalign">0</property>
+                                            <property name="label" translatable="yes">Calibration Mode:</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">2</property>
@@ -353,8 +351,8 @@
                                           <object class="GtkLabel" id="label8">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Calibration Modes:</property>
                                             <property name="xalign">0</property>
+                                            <property name="label" translatable="yes">Calibration Modes:</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">2</property>
@@ -369,8 +367,8 @@
                                           <object class="GtkLabel" id="label5">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">TRX Rate Governor:</property>
                                             <property name="xalign">0</property>
+                                            <property name="label" translatable="yes">TRX Rate Governor:</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">4</property>
@@ -383,8 +381,8 @@
                                           <object class="GtkLabel" id="label25">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">TRX Rate Governor Available:</property>
                                             <property name="xalign">0</property>
+                                            <property name="label" translatable="yes">TRX Rate Governor Available:</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">4</property>
@@ -399,9 +397,9 @@
                                           <object class="GtkLabel" id="label_filter_fir_sel">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
+                                            <property name="xalign">0</property>
                                             <property name="label" translatable="yes">Filter FIR
 configuration:</property>
-                                            <property name="xalign">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">6</property>
@@ -414,6 +412,7 @@ configuration:</property>
                                           <object class="GtkFileChooserButton" id="filter_fir_config">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
+                                            <property name="orientation">vertical</property>
                                             <property name="width_chars">12</property>
                                             <signal name="file-set" handler="filter_fir_config_file_set_cb" swapped="no"/>
                                           </object>
@@ -639,6 +638,7 @@ configuration:</property>
                                               <object class="GtkComboBoxText" id="dcxo_cal_type">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
+                                                <property name="entry_text_column">0</property>
                                                 <items>
                                                   <item translatable="yes">REFCLK</item>
                                                   <item translatable="yes">RF Output</item>
@@ -870,6 +870,7 @@ configuration:</property>
                                     <property name="use_action_appearance">False</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
+                                    <property name="use_action_appearance">False</property>
                                     <property name="label" translatable="yes">Zoom In</property>
                                     <property name="use_underline">True</property>
                                     <property name="stock_id">gtk-go-down</property>
@@ -937,6 +938,9 @@ configuration:</property>
                                               <placeholder/>
                                             </child>
                                             <child>
+                                              <placeholder/>
+                                            </child>
+                                            <child>
                                               <object class="GtkLabel" id="label12">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
@@ -948,8 +952,11 @@ configuration:</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="invisible_char">•</property>
+                                                <property name="invisible_char_set">True</property>
                                                 <property name="primary_icon_activatable">False</property>
                                                 <property name="secondary_icon_activatable">False</property>
+                                                <property name="primary_icon_sensitive">True</property>
+                                                <property name="secondary_icon_sensitive">True</property>
                                                 <property name="adjustment">adjustment_rf_bw_rx</property>
                                                 <property name="digits">3</property>
                                               </object>
@@ -974,8 +981,11 @@ configuration:</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="invisible_char">•</property>
+                                                <property name="invisible_char_set">True</property>
                                                 <property name="primary_icon_activatable">False</property>
                                                 <property name="secondary_icon_activatable">False</property>
+                                                <property name="primary_icon_sensitive">True</property>
+                                                <property name="secondary_icon_sensitive">True</property>
                                                 <property name="adjustment">adjustment_sampl_freq_tx</property>
                                                 <property name="digits">6</property>
                                               </object>
@@ -1002,8 +1012,11 @@ configuration:</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="invisible_char">•</property>
+                                                <property name="invisible_char_set">True</property>
                                                 <property name="primary_icon_activatable">False</property>
                                                 <property name="secondary_icon_activatable">False</property>
+                                                <property name="primary_icon_sensitive">True</property>
+                                                <property name="secondary_icon_sensitive">True</property>
                                                 <property name="adjustment">adjustment_rx_lo_freq</property>
                                                 <property name="digits">6</property>
                                               </object>
@@ -1029,6 +1042,7 @@ configuration:</property>
                                               <object class="GtkComboBoxText" id="rf_port_select_rx">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
+                                                <property name="entry_text_column">0</property>
                                               </object>
                                               <packing>
                                                 <property name="left_attach">3</property>
@@ -1052,6 +1066,7 @@ configuration:</property>
                                               <object class="GtkComboBoxText" id="rx_fastlock_profile">
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">False</property>
+                                                <property name="entry_text_column">0</property>
                                                 <items>
                                                   <item translatable="yes">0</item>
                                                   <item translatable="yes">1</item>
@@ -1112,6 +1127,7 @@ configuration:</property>
                                                 <property name="visible">True</property>
                                                 <property name="can_focus">True</property>
                                                 <property name="receives_default">False</property>
+                                                <property name="use_action_appearance">False</property>
                                                 <property name="xalign">0</property>
                                                 <property name="draw_indicator">True</property>
                                               </object>
@@ -1177,8 +1193,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label15">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">Hardware Gain(dB):</property>
                                                             <property name="xalign">1</property>
+                                                            <property name="label" translatable="yes">Hardware Gain(dB):</property>
                                                           </object>
                                                           <packing>
                                                             <property name="x_options">GTK_FILL</property>
@@ -1190,8 +1206,11 @@ configuration:</property>
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">True</property>
                                                             <property name="invisible_char">•</property>
+                                                            <property name="invisible_char_set">True</property>
                                                             <property name="primary_icon_activatable">False</property>
                                                             <property name="secondary_icon_activatable">False</property>
+                                                            <property name="primary_icon_sensitive">True</property>
+                                                            <property name="secondary_icon_sensitive">True</property>
                                                             <property name="adjustment">adjustment_hw_gain_rx1</property>
                                                             <property name="digits">2</property>
                                                           </object>
@@ -1206,8 +1225,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label17">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">RSSI(dB):</property>
                                                             <property name="xalign">1</property>
+                                                            <property name="label" translatable="yes">RSSI(dB):</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">1</property>
@@ -1220,8 +1239,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="rssi_rx1">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">0</property>
                                                             <property name="xalign">0</property>
+                                                            <property name="label" translatable="yes">0</property>
                                                           </object>
                                                           <packing>
                                                             <property name="left_attach">1</property>
@@ -1236,8 +1255,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label27">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">Gain Control:</property>
                                                             <property name="xalign">1</property>
+                                                            <property name="label" translatable="yes">Gain Control:</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">2</property>
@@ -1250,8 +1269,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label30">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">Gain Control Modes:</property>
                                                             <property name="xalign">1</property>
+                                                            <property name="label" translatable="yes">Gain Control Modes:</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">3</property>
@@ -1279,6 +1298,7 @@ configuration:</property>
                                                           <object class="GtkComboBoxText" id="gain_control_mode_available_rx1">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
+                                                            <property name="entry_text_column">0</property>
                                                           </object>
                                                           <packing>
                                                             <property name="left_attach">1</property>
@@ -1331,8 +1351,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label26">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">Hardware Gain(dB):</property>
                                                             <property name="xalign">1</property>
+                                                            <property name="label" translatable="yes">Hardware Gain(dB):</property>
                                                           </object>
                                                           <packing>
                                                             <property name="x_options">GTK_FILL</property>
@@ -1344,8 +1364,11 @@ configuration:</property>
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">True</property>
                                                             <property name="invisible_char">•</property>
+                                                            <property name="invisible_char_set">True</property>
                                                             <property name="primary_icon_activatable">False</property>
                                                             <property name="secondary_icon_activatable">False</property>
+                                                            <property name="primary_icon_sensitive">True</property>
+                                                            <property name="secondary_icon_sensitive">True</property>
                                                             <property name="adjustment">adjustment_hw_gain_rx2</property>
                                                             <property name="digits">2</property>
                                                           </object>
@@ -1360,8 +1383,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label28">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">RSSI(dB):</property>
                                                             <property name="xalign">1</property>
+                                                            <property name="label" translatable="yes">RSSI(dB):</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">1</property>
@@ -1374,8 +1397,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="rssi_rx2">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">0</property>
                                                             <property name="xalign">0</property>
+                                                            <property name="label" translatable="yes">0</property>
                                                           </object>
                                                           <packing>
                                                             <property name="left_attach">1</property>
@@ -1390,8 +1413,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label29">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">Gain Control:</property>
                                                             <property name="xalign">1</property>
+                                                            <property name="label" translatable="yes">Gain Control:</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">2</property>
@@ -1404,8 +1427,8 @@ configuration:</property>
                                                           <object class="GtkLabel" id="label31">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
-                                                            <property name="label" translatable="yes">Gain Control Modes:</property>
                                                             <property name="xalign">1</property>
+                                                            <property name="label" translatable="yes">Gain Control Modes:</property>
                                                           </object>
                                                           <packing>
                                                             <property name="top_attach">3</property>
@@ -1433,6 +1456,7 @@ configuration:</property>
                                                           <object class="GtkComboBoxText" id="gain_control_mode_available_rx2">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
+                                                            <property name="entry_text_column">0</property>
                                                           </object>
                                                           <packing>
                                                             <property name="left_attach">1</property>
@@ -1634,6 +1658,9 @@ configuration:</property>
                                           <placeholder/>
                                         </child>
                                         <child>
+                                          <placeholder/>
+                                        </child>
+                                        <child>
                                           <object class="GtkLabel" id="label16">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
@@ -1649,8 +1676,11 @@ configuration:</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="invisible_char">•</property>
+                                            <property name="invisible_char_set">True</property>
                                             <property name="primary_icon_activatable">False</property>
                                             <property name="secondary_icon_activatable">False</property>
+                                            <property name="primary_icon_sensitive">True</property>
+                                            <property name="secondary_icon_sensitive">True</property>
                                             <property name="adjustment">adjustment_rf_bw_tx</property>
                                             <property name="digits">3</property>
                                           </object>
@@ -1679,8 +1709,11 @@ configuration:</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="invisible_char">•</property>
+                                            <property name="invisible_char_set">True</property>
                                             <property name="primary_icon_activatable">False</property>
                                             <property name="secondary_icon_activatable">False</property>
+                                            <property name="primary_icon_sensitive">True</property>
+                                            <property name="secondary_icon_sensitive">True</property>
                                             <property name="adjustment">adjustment_sampl_freq_tx</property>
                                             <property name="digits">6</property>
                                           </object>
@@ -1724,8 +1757,11 @@ configuration:</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="invisible_char">•</property>
+                                            <property name="invisible_char_set">True</property>
                                             <property name="primary_icon_activatable">False</property>
                                             <property name="secondary_icon_activatable">False</property>
+                                            <property name="primary_icon_sensitive">True</property>
+                                            <property name="secondary_icon_sensitive">True</property>
                                             <property name="adjustment">adjustment_tx_lo_freq</property>
                                             <property name="digits">6</property>
                                           </object>
@@ -1742,6 +1778,7 @@ configuration:</property>
                                           <object class="GtkComboBoxText" id="rf_port_select_tx">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
+                                            <property name="entry_text_column">0</property>
                                           </object>
                                           <packing>
                                             <property name="left_attach">3</property>
@@ -1769,6 +1806,7 @@ configuration:</property>
                                           <object class="GtkComboBoxText" id="tx_fastlock_profile">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
+                                            <property name="entry_text_column">0</property>
                                             <items>
                                               <item translatable="yes">0</item>
                                               <item translatable="yes">1</item>
@@ -1831,6 +1869,7 @@ configuration:</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
                                             <property name="receives_default">False</property>
+                                            <property name="use_action_appearance">False</property>
                                             <property name="xalign">0</property>
                                             <property name="draw_indicator">True</property>
                                           </object>
@@ -2179,6 +2218,7 @@ configuration:</property>
                                                             <object class="GtkComboBoxText" id="fpga_tx_frequency_available">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
+                                                              <property name="entry_text_column">0</property>
                                                             </object>
                                                             <packing>
                                                             <property name="left_attach">1</property>
@@ -2309,6 +2349,7 @@ configuration:</property>
                                                             <object class="GtkComboBoxText" id="fpga_rx_frequency_available">
                                                             <property name="visible">True</property>
                                                             <property name="can_focus">False</property>
+                                                              <property name="entry_text_column">0</property>
                                                             </object>
                                                             <packing>
                                                             <property name="left_attach">1</property>
@@ -2618,721 +2659,6 @@ configuration:</property>
           </packing>
         </child>
         <child>
-          <object class="GtkFrame" id="frame1">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label_xalign">0</property>
-            <property name="shadow_type">in</property>
-            <child>
-              <object class="GtkAlignment" id="rx_settings1">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="left_padding">12</property>
-                <child>
-                  <object class="GtkHBox" id="box_receive_settings1">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="spacing">5</property>
-                    <child>
-                      <object class="GtkVBox" id="boxReceive1">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <child>
-                          <object class="GtkTable" id="table10">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="n_rows">3</property>
-                            <property name="n_columns">5</property>
-                            <property name="column_spacing">10</property>
-                            <child>
-                              <placeholder/>
-                            </child>
-                            <child>
-                              <placeholder/>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="label53">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">RF Bandwidth(MHz):</property>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkSpinButton" id="rf_bandwidth_rx1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="invisible_char">•</property>
-                                <property name="text" translatable="yes">0.000</property>
-                                <property name="primary_icon_activatable">False</property>
-                                <property name="secondary_icon_activatable">False</property>
-                                <property name="adjustment">adjustment_rf_bw_rx</property>
-                                <property name="digits">3</property>
-                              </object>
-                              <packing>
-                                <property name="top_attach">1</property>
-                                <property name="bottom_attach">2</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="label54">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Sampling Rate (MSPS):</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">1</property>
-                                <property name="right_attach">2</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSpinButton" id="sampling_freq_rx1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="invisible_char">•</property>
-                                <property name="text" translatable="yes">0.000000</property>
-                                <property name="primary_icon_activatable">False</property>
-                                <property name="secondary_icon_activatable">False</property>
-                                <property name="adjustment">adjustment_sampl_freq_tx</property>
-                                <property name="digits">6</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">1</property>
-                                <property name="right_attach">2</property>
-                                <property name="top_attach">1</property>
-                                <property name="bottom_attach">2</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="label55">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">RX LO Frequency(MHz):</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">2</property>
-                                <property name="right_attach">3</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSpinButton" id="rx_lo_freq1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="invisible_char">•</property>
-                                <property name="text" translatable="yes">70.000000</property>
-                                <property name="primary_icon_activatable">False</property>
-                                <property name="secondary_icon_activatable">False</property>
-                                <property name="adjustment">adjustment_rx_lo_freq</property>
-                                <property name="digits">6</property>
-                                <property name="value">70</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">2</property>
-                                <property name="right_attach">3</property>
-                                <property name="top_attach">1</property>
-                                <property name="bottom_attach">2</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="label56">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">RF Port Select</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">3</property>
-                                <property name="right_attach">4</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkComboBoxText" id="rf_port_select_rx1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">3</property>
-                                <property name="right_attach">4</property>
-                                <property name="top_attach">1</property>
-                                <property name="bottom_attach">2</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkLabel" id="rx_fastlock_label1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label" translatable="yes">Fastlock Profile:</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">4</property>
-                                <property name="right_attach">5</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkComboBoxText" id="rx_fastlock_profile1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <items>
-                                  <item translatable="yes">0</item>
-                                  <item translatable="yes">1</item>
-                                  <item translatable="yes">2</item>
-                                  <item translatable="yes">3</item>
-                                  <item translatable="yes">4</item>
-                                  <item translatable="yes">5</item>
-                                  <item translatable="yes">6</item>
-                                  <item translatable="yes">7</item>
-                                </items>
-                              </object>
-                              <packing>
-                                <property name="left_attach">4</property>
-                                <property name="right_attach">5</property>
-                                <property name="top_attach">1</property>
-                                <property name="bottom_attach">2</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkTable" id="rx_fastlock_actions1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <child>
-                                  <object class="GtkButton" id="rx_fastlock_store1">
-                                    <property name="label" translatable="yes">Store</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">True</property>
-                                  </object>
-                                  <packing>
-                                    <property name="y_options">GTK_FILL</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkButton" id="rx_fastlock_recall1">
-                                    <property name="label" translatable="yes">Recall</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">True</property>
-                                  </object>
-                                  <packing>
-                                    <property name="left_attach">1</property>
-                                    <property name="y_options">GTK_FILL</property>
-                                  </packing>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="left_attach">4</property>
-                                <property name="right_attach">5</property>
-                                <property name="top_attach">2</property>
-                                <property name="bottom_attach">3</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkCheckButton" id="rx_lo_external1">
-                                <property name="label" translatable="yes">External RX LO</property>
-                                <property name="use_action_appearance">False</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">False</property>
-                                <property name="xalign">0</property>
-                                <property name="draw_indicator">True</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">2</property>
-                                <property name="right_attach">3</property>
-                                <property name="top_attach">2</property>
-                                <property name="bottom_attach">3</property>
-                                <property name="x_options">GTK_FILL</property>
-                                <property name="y_options">GTK_FILL</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkSpinButton" id="sampling_freq_rx_decim1">
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="invisible_char">•</property>
-                                <property name="text" translatable="yes">0.000000</property>
-                                <property name="primary_icon_activatable">False</property>
-                                <property name="secondary_icon_activatable">False</property>
-                                <property name="adjustment">adjustment_sampling_freq_rx_decim</property>
-                                <property name="digits">6</property>
-                              </object>
-                              <packing>
-                                <property name="left_attach">1</property>
-                                <property name="right_attach">2</property>
-                                <property name="top_attach">2</property>
-                                <property name="bottom_attach">3</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">False</property>
-                            <property name="position">0</property>
-                          </packing>
-                        </child>
-                        <child>
-                          <object class="GtkHBox" id="box_RXs1">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="spacing">5</property>
-                            <child>
-                              <object class="GtkFrame" id="frame_rx3">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label_xalign">0</property>
-                                <property name="shadow_type">in</property>
-                                <child>
-                                  <object class="GtkAlignment" id="alignment4">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="left_padding">12</property>
-                                    <child>
-                                      <object class="GtkTable" id="table11">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="n_rows">4</property>
-                                        <property name="n_columns">2</property>
-                                        <property name="column_spacing">5</property>
-                                        <property name="row_spacing">5</property>
-                                        <child>
-                                          <object class="GtkLabel" id="label57">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Hardware Gain(dB):</property>
-                                            <property name="xalign">1</property>
-                                          </object>
-                                          <packing>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkSpinButton" id="hardware_gain_rx3">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
-                                            <property name="invisible_char">•</property>
-                                            <property name="text" translatable="yes">0.00</property>
-                                            <property name="primary_icon_activatable">False</property>
-                                            <property name="secondary_icon_activatable">False</property>
-                                            <property name="adjustment">adjustment_hw_gain_rx1</property>
-                                            <property name="digits">2</property>
-                                          </object>
-                                          <packing>
-                                            <property name="left_attach">1</property>
-                                            <property name="right_attach">2</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="label58">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">RSSI(dB):</property>
-                                            <property name="xalign">1</property>
-                                          </object>
-                                          <packing>
-                                            <property name="top_attach">1</property>
-                                            <property name="bottom_attach">2</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="rssi_rx3">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">0</property>
-                                            <property name="xalign">0</property>
-                                          </object>
-                                          <packing>
-                                            <property name="left_attach">1</property>
-                                            <property name="right_attach">2</property>
-                                            <property name="top_attach">1</property>
-                                            <property name="bottom_attach">2</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="label59">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Gain Control:</property>
-                                            <property name="xalign">1</property>
-                                          </object>
-                                          <packing>
-                                            <property name="top_attach">2</property>
-                                            <property name="bottom_attach">3</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="label60">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Gain Control Modes:</property>
-                                            <property name="xalign">1</property>
-                                          </object>
-                                          <packing>
-                                            <property name="top_attach">3</property>
-                                            <property name="bottom_attach">4</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="gain_control_mode_rx3">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="xalign">0</property>
-                                          </object>
-                                          <packing>
-                                            <property name="left_attach">1</property>
-                                            <property name="right_attach">2</property>
-                                            <property name="top_attach">2</property>
-                                            <property name="bottom_attach">3</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkComboBoxText" id="gain_control_mode_available_rx3">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                          </object>
-                                          <packing>
-                                            <property name="left_attach">1</property>
-                                            <property name="right_attach">2</property>
-                                            <property name="top_attach">3</property>
-                                            <property name="bottom_attach">4</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child type="label">
-                                  <object class="GtkLabel" id="label61">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="label" translatable="yes">&lt;b&gt;RX 1&lt;/b&gt;</property>
-                                    <property name="use_markup">True</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkFrame" id="frame_rx4">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="label_xalign">0</property>
-                                <property name="shadow_type">in</property>
-                                <child>
-                                  <object class="GtkAlignment" id="alignment6">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="left_padding">12</property>
-                                    <child>
-                                      <object class="GtkTable" id="table12">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">False</property>
-                                        <property name="n_rows">4</property>
-                                        <property name="n_columns">2</property>
-                                        <property name="column_spacing">5</property>
-                                        <property name="row_spacing">5</property>
-                                        <child>
-                                          <object class="GtkLabel" id="label62">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Hardware Gain(dB):</property>
-                                            <property name="xalign">1</property>
-                                          </object>
-                                          <packing>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkSpinButton" id="hardware_gain_rx4">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
-                                            <property name="invisible_char">•</property>
-                                            <property name="text" translatable="yes">0.00</property>
-                                            <property name="primary_icon_activatable">False</property>
-                                            <property name="secondary_icon_activatable">False</property>
-                                            <property name="adjustment">adjustment_hw_gain_rx2</property>
-                                            <property name="digits">2</property>
-                                          </object>
-                                          <packing>
-                                            <property name="left_attach">1</property>
-                                            <property name="right_attach">2</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="label63">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">RSSI(dB):</property>
-                                            <property name="xalign">1</property>
-                                          </object>
-                                          <packing>
-                                            <property name="top_attach">1</property>
-                                            <property name="bottom_attach">2</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="rssi_rx4">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">0</property>
-                                            <property name="xalign">0</property>
-                                          </object>
-                                          <packing>
-                                            <property name="left_attach">1</property>
-                                            <property name="right_attach">2</property>
-                                            <property name="top_attach">1</property>
-                                            <property name="bottom_attach">2</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="label64">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Gain Control:</property>
-                                            <property name="xalign">1</property>
-                                          </object>
-                                          <packing>
-                                            <property name="top_attach">2</property>
-                                            <property name="bottom_attach">3</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="label65">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="label" translatable="yes">Gain Control Modes:</property>
-                                            <property name="xalign">1</property>
-                                          </object>
-                                          <packing>
-                                            <property name="top_attach">3</property>
-                                            <property name="bottom_attach">4</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel" id="gain_control_mode_rx4">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                            <property name="xalign">0</property>
-                                          </object>
-                                          <packing>
-                                            <property name="left_attach">1</property>
-                                            <property name="right_attach">2</property>
-                                            <property name="top_attach">2</property>
-                                            <property name="bottom_attach">3</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                        <child>
-                                          <object class="GtkComboBoxText" id="gain_control_mode_available_rx4">
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">False</property>
-                                          </object>
-                                          <packing>
-                                            <property name="left_attach">1</property>
-                                            <property name="right_attach">2</property>
-                                            <property name="top_attach">3</property>
-                                            <property name="bottom_attach">4</property>
-                                            <property name="x_options">GTK_FILL</property>
-                                            <property name="y_options">GTK_FILL</property>
-                                          </packing>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child type="label">
-                                  <object class="GtkLabel" id="label66">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">False</property>
-                                    <property name="label" translatable="yes">&lt;b&gt;RX 2&lt;/b&gt;</property>
-                                    <property name="use_markup">True</property>
-                                  </object>
-                                </child>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">False</property>
-                            <property name="padding">5</property>
-                            <property name="position">1</property>
-                          </packing>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkFrame" id="frame6">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="label_xalign">0</property>
-                        <property name="shadow_type">none</property>
-                        <child>
-                          <object class="GtkAlignment" id="alignment7">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="left_padding">12</property>
-                            <child>
-                              <object class="GtkVBox" id="box17">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="spacing">5</property>
-                                <child>
-                                  <object class="GtkCheckButton" id="quad1">
-                                    <property name="label" translatable="yes">TX RX</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">False</property>
-                                    <property name="xalign">0</property>
-                                    <property name="active">True</property>
-                                    <property name="draw_indicator">True</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">0</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkCheckButton" id="rfdc1">
-                                    <property name="label" translatable="yes">RX</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">False</property>
-                                    <property name="xalign">0</property>
-                                    <property name="draw_indicator">True</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">1</property>
-                                  </packing>
-                                </child>
-                                <child>
-                                  <object class="GtkCheckButton" id="bbdc1">
-                                    <property name="label" translatable="yes">TX</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="receives_default">False</property>
-                                    <property name="xalign">0</property>
-                                    <property name="draw_indicator">True</property>
-                                  </object>
-                                  <packing>
-                                    <property name="expand">False</property>
-                                    <property name="fill">True</property>
-                                    <property name="position">2</property>
-                                  </packing>
-                                </child>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                        <child type="label">
-                          <object class="GtkLabel" id="label67">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">&lt;b&gt;RF Option&lt;/b&gt;</property>
-                            <property name="use_markup">True</property>
-                          </object>
-                        </child>
-                      </object>
-                      <packing>
-                        <property name="expand">False</property>
-                        <property name="fill">True</property>
-                        <property name="position">1</property>
-                      </packing>
-                    </child>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child type="label">
-              <object class="GtkHBox" id="box18">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <child>
-                  <object class="GtkToggleToolButton" id="rx_toggle1">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">Zoom In</property>
-                    <property name="use_underline">True</property>
-                    <property name="stock_id">gtk-go-down</property>
-                    <property name="active">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">True</property>
-                    <property name="fill">True</property>
-                    <property name="position">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="label68">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label" translatable="yes">&lt;b&gt;AD9361 / AD9364 Receive Chain&lt;/b&gt;</property>
-                    <property name="use_markup">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
-              </object>
-            </child>
-          </object>
-          <packing>
-            <property name="position">1</property>
-          </packing>
-        </child>
-        <child type="tab">
-          <object class="GtkLabel" id="label52">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">MWT Settings</property>
-          </object>
-          <packing>
-            <property name="position">1</property>
-            <property name="tab_fill">False</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkVBox" id="box4">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
@@ -3455,7 +2781,7 @@ configuration:</property>
             </child>
           </object>
           <packing>
-            <property name="position">2</property>
+            <property name="position">1</property>
           </packing>
         </child>
         <child type="tab">
@@ -3465,7 +2791,7 @@ configuration:</property>
             <property name="label" translatable="yes">Block Diagram</property>
           </object>
           <packing>
-            <property name="position">2</property>
+            <property name="position">1</property>
             <property name="tab_fill">False</property>
           </packing>
         </child>
